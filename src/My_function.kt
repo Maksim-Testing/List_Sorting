@@ -6,7 +6,8 @@ fun fillingNumberList(): MutableList<Int> {
 
     while (listRandom.count() < 10) {
         val input = readLine()
-        if (input != null && input != "" && input.all { it.isDigit() }) {
+        if (input != null && input.toIntOrNull() != null ) {
+
             listRandom.add(input.toInt())
 
         } else {

@@ -23,8 +23,8 @@ fun main() {
     println(multiLineText)
     var numberFun = 0
     var boolFunction: Boolean = false
-    while (boolFunction != true) {
-        val input: String? = readLine()
+    while (!boolFunction) {
+        val input: String? = readlnOrNull()
         if (input != null && input != "" && input.all { it.isDigit() }) {
             if (input.toInt() in 1..9) {
                 numberFun = input.toInt()
